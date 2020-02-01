@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>
+
+            Fake Image Test
+        </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        
+    </head>
+
+    <body>
+        <div class="contianer text-center mt-5">
+            <h1>Reverse Image Search</h1>
+            <hr>
+            <form enctype="multipart/form-data" method="POST">{% csrf_token %}
+                <h3>Upload Image</h3><br>
+                <input  type="file" name="up_image"><br><br>
+                <button class="btn btn-primary" type="submit" >Upload</button>
+            </form>
+
+            <h4>{{date}}</h4>
+            <a href="{{url}}">{{url}}</a>
+        </div>
+    </body>
+
+</html>
